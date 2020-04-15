@@ -6,26 +6,352 @@
   /* выше установили ограничение по максимальной ширине */
   margin: 0 auto;
   /* выше для экранов больше 1600px отцентрировали весь контент */
-  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-family: 'Helvetica Neue', 'Arial', sans-serif;
+  /*Черный цвет для всего текста на странице, переопределяем дефолтные значения браузера??*/
+  color: #000;
+  text-rendering: geometricPrecision;
+}
+
+/*Миксы для работы с текстом*/
+.text-center {
+  text-align: center;
+}
+
+/* FIXME: Оверкилл? По бэм получается правильно начертание шрифта лучше в микс вынести?*/
+.font-semi-bold {
+  font-weight: 600;
+}
+
+/*Миксин серого фона*/
+.gray-background {
+  background-color: #f2f2f2;
+}
+
+/*Миксин черного фона*/
+.black-background {
+  background-color: #1f1f1f;
+}
+
+/*Миксин синего фона*/
+.blue-background {
+  background-color: #2f80ed;
+}
+
+.blue-color {
+  color: #2f80ed;
+}
+
+.logo {
+  background-image: url(../images/logo_place_header.svg);
+  background-repeat: no-repeat;
+  width: 183px;
+  height: 32px;
+  display: block;
+  text-indent: -9000px;
+  color: transparent;
+  z-index: 1;
+}
+
+.logo_place_header {
+  position: absolute;
+  top: 30px;
+}
+
+.logo_place_footer {
+  background-image: url(../images/logo_place_footer.svg);
 }
 
 .header {
   height: 100vh;
   min-height: 600px;
   max-height: 756px;
+  position: relative;
   /* выше установили ограничения для секции */
+  display: flex;
+  flex-flow: row nowrap;
+  /*Под вопросом: правильно использовать один отступ для блока,
+   где он повторяется, или написать отступ для каждого элемента
+   отдельно? По бэм правильнее элементу каждому прописать отступ???
+   Но элемент не используется отдельно, значит пишу отступ
+   для всего блока чтобы не плодить код*/
+  padding-left: 64px;
 }
 
-/* ниже мы привели пример двух селекторов, чтобы вы вспомнили запись элемента */
+.header__title {
+  /*font-weight: 600;*/
+  font-size: 96px;
+  line-height: 102px;
+  align-self: center;
+  width: 730px;
+  z-index: 2;
+  margin: 0;
+}
+
+.header__subtitle {
+  font-size: 18px;
+  line-height: 25px;
+  position: absolute;
+  bottom: 30px;
+  width: 388px;
+  z-index: 2;
+  margin: 0;
+}
+
+.header__link {
+  text-decoration: none;
+}
+
+.header__link:after {
+  content: '→';
+  padding-left: 5px;
+}
+
+.header__main-illustration {
+  width: 765px;
+  height: 608px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: 1;
+}
+
+/* Синий квадрат */
 .header__square-pic {
   height: 568px;
   width: 568px;
+  position: absolute;
+  right: 0;
+  top: 64px;
+  z-index: 0;
 }
 
-/* и элемента с модификатором вида ключ-значение */
+/*Блок description*/
+.description {
+  margin: 100px 0;
+  display: flex;
+  justify-content: center;
+}
+
+.two-columns {
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.two-columns__brief {
+  width: 175px;
+  line-height: 1.2;
+  font-size: 18px;
+}
+
+.two-columns__main-text {
+  width: 80%;
+  min-width: 784px;
+}
+
+.two-columns__paragraph {
+  padding: 0;
+  margin: 0 0 30px;
+  line-height: 34px;
+  font-size: 24px;
+}
+
+.two-columns__paragraph:last-of-type {
+  margin-bottom: 0;
+}
+
+.two-columns__span-accent {
+  font-weight: 600;
+
+}
+
+/* Блок цифр и фактов c flexbox таблицей */
+.digits {
+  margin: 100px 0;
+}
+
+.section-title {
+  line-height: 69px;
+  font-size: 60px;
+  /*font-weight: 600;*/
+  /*Стоит ли использовать отдельный селектор
+  для определения стилей заголовка блока?
+  В этом макете подразумевается использование этого блока
+  только дважды, и отдельный селектор не требуется.
+  */
+  width: 60%;
+  margin: 0 auto 20px;
+}
+
+.section-title_theme_dark {
+  color: #fff;
+}
+
+.section-subtitle {
+  font-size: 24px;
+  line-height: 34px;
+  width: 60%;
+  margin: auto;
+}
+
+.section-subtitle_theme_dark {
+  color: #fff;
+}
+
+.table {
+  width: 1100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-flow: row wrap;
+  margin: auto;
+}
+
+.table_theme_dark {
+  z-index: 1;
+}
+
+.table__cell {
+  width: 250px;
+  margin-top: 60px;
+}
+
 .table__cell_theme_dark {
   width: 200px;
-  color: white;
+  color: #fff;
   margin-right: 0;
   margin-top: 80px;
+  z-index: 1;
+}
+
+.table__heading {
+  /*font-weight: 600;*/
+  margin: 0 0 20px;
+  font-size: 24px;
+  line-height: 1.15;
+}
+
+.table__heading_theme_dark {
+  color: #fff;
+}
+
+.table__text {
+  margin: 20px 0 0;
+  font-size: 18px;
+  line-height: 1.2;
+}
+
+.table__text_theme_dark {
+  color: #fff;
+}
+
+/*Feiman*/
+.feynman {
+  padding: 100px 0 90px;
+  background-image: url(../images/feynman.png);
+  background-position: bottom left;
+  background-size: 867px 637px;
+  background-repeat: no-repeat;
+  position: relative;
+  /*Высота блока в макете не задана, примерно вот такая*/
+  min-height: 890px;
+}
+
+.feynman__title {
+  font-size: 120px;
+  line-height: 1.15;
+  width: 648px;
+  margin: 0 auto 40px;
+}
+
+.feynman__subtitle {
+  margin: 0;
+  font-size: 36px;
+  line-height: 51px;
+}
+
+.feynman__link {
+  position: absolute;
+  top: 50%;
+  right: 48px;
+  font-size: 36px;
+  line-height: 51px;
+  color: #000;
+  text-decoration: none;
+}
+
+.feynman__link:after {
+  content: '→';
+  padding-left: 10px;
+}
+
+/*Kaufman*/
+.kaufman {
+  padding: 90px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.kaufman__triangle {
+  position: absolute;
+  width: 877px;
+  height: 877px;
+  background-image: url("../images/kaufman-triangle.svg");
+  right: -210px;
+  top: 0;
+}
+
+/*Footer*/
+.footer {
+  padding: 60px 0 40px;
+  position: relative;
+}
+
+.footer__columns {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer__column_content_copyright {
+  flex-basis: 711px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.footer__author {
+  font-size: 18px;
+  line-height: 25px;
+  margin: 18px 0;
+  color: #fff;
+}
+
+.footer__column-heading {
+  margin: 0 0 20px;
+  line-height: 30px;
+  font-size: 18px;
+  color: #fff;
+}
+
+.footer__column-links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  line-height: 30px;
+  font-size: 18px;
+}
+
+.footer__social-icons {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  line-height: 30px;
+  font-size: 18px;
+}
+
+.footer__column-links {
+  margin-bottom: 16px;
 }
