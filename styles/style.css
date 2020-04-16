@@ -355,3 +355,30 @@
 .footer__column-links {
   margin-bottom: 16px;
 }
+
+.footer__link {
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer__social-icon {
+  padding-left: 26px;
+}
+
+.footer__social-icon_icon_facebook {
+  background-image: url(../images/facebook_color_white.svg);
+  background-repeat: no-repeat;
+  background-position: 0 50%;
+}
+
+.footer__social-icon_icon_vk {
+  background-image: url(../images/vk_color_white.svg);
+  background-repeat: no-repeat;
+  background-position: 0 50%;
+}
+
+.footer__social-icon_icon_instagram {
+  background-image: url(../images/instagram_color_white.svg);
+  background-repeat: no-repeat;
+  background-position: 0 50%;
+}
