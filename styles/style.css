@@ -20,7 +20,7 @@
 
 /* QUESTION: Оверкилл? По бэм получается правильно начертание шрифта лучше в микс вынести?*/
 .font-semi-bold {
-  font-weight: 600;
+
 }
 
 /*Миксин серого фона*/
@@ -82,6 +82,7 @@
 .header__title {
   font-size: 96px;
   line-height: 102px;
+  font-weight: 600;
   align-self: center;
   width: 730px;
   z-index: 2;
@@ -92,6 +93,7 @@
   font-size: 18px;
   line-height: 25px;
   position: absolute;
+  left: 68px;
   bottom: 30px;
   width: 388px;
   z-index: 2;
@@ -100,6 +102,10 @@
 
 .header__link {
   text-decoration: none;
+}
+
+.header__link:hover {
+  text-decoration: underline;
 }
 
 .header__link:after {
@@ -176,6 +182,7 @@
 .section-title {
   line-height: 69px;
   font-size: 60px;
+  font-weight: 600;
   width: 60%;
   margin: 0 auto 20px;
 }
@@ -225,6 +232,7 @@
   margin: 0 0 20px;
   font-size: 24px;
   line-height: 1.15;
+  font-weight: 600;
 }
 
 .table__heading_theme_dark {
@@ -250,14 +258,15 @@
   background-repeat: no-repeat;
   position: relative;
   /*Высота блока в макете не задана, примерно вот такая*/
-  min-height: 890px;
+  min-height: 790px;
 }
 
 .feynman__title {
   font-size: 120px;
   line-height: 1.15;
+  font-weight: 600;
   width: 648px;
-  margin: 0 auto 40px;
+  margin: 0 auto 70px;
 }
 
 .feynman__subtitle {
@@ -295,6 +304,7 @@
   background-image: url("../images/kaufman-triangle.svg");
   right: -210px;
   top: 0;
+  background-size: contain;
 }
 
 /*Footer*/
@@ -309,7 +319,7 @@
   display: flex;
   justify-content: space-between;
   /*Высота блока в макете не задана, примерно вот такая*/
-  min-height: 220px;
+  min-height: 350px;
 }
 
 .footer__column_content_copyright {
@@ -358,23 +368,22 @@
   text-decoration: none;
 }
 
-.footer__social-icon {
+.footer__link_icon_facebook {
   padding-left: 26px;
-}
-
-.footer__social-icon_icon_facebook {
   background-image: url(../images/facebook_color_white.svg);
   background-repeat: no-repeat;
   background-position: 0 50%;
 }
 
-.footer__social-icon_icon_vk {
+.footer__link_icon_vk {
+  padding-left: 26px;
   background-image: url(../images/vk_color_white.svg);
   background-repeat: no-repeat;
   background-position: 0 50%;
 }
 
-.footer__social-icon_icon_instagram {
+.footer__link_icon_instagram {
+  padding-left: 26px;
   background-image: url(../images/instagram_color_white.svg);
   background-repeat: no-repeat;
   background-position: 0 50%;
