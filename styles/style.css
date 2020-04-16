@@ -285,6 +285,10 @@
   text-decoration: none;
 }
 
+.feynman__link:hover {
+  text-decoration: underline;
+}
+
 .feynman__link:after {
   content: '→';
   padding-left: 10px;
@@ -366,6 +370,10 @@
 .footer__link {
   color: #fff;
   text-decoration: none;
+}
+
+.footer__link:hover {
+  text-decoration: underline;
 }
 
 .footer__link_icon_facebook {
