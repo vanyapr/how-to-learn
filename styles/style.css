@@ -18,11 +18,6 @@
   text-align: center;
 }
 
-/* QUESTION: Оверкилл? По бэм получается правильно начертание шрифта лучше в микс вынести?*/
-.font-semi-bold {
-
-}
-
 /*Миксин серого фона*/
 .gray-background {
   background-color: #f2f2f2;
