@@ -1,0 +1,12 @@
+@import url(./_place/logo_place_header.css);
+@import url(./_place/logo_place_footer.css);
+
+.logo {
+  background-repeat: no-repeat;
+  width: 183px;
+  height: 32px;
+  display: block;
+  text-indent: -9000px;
+  color: transparent;
+  z-index: 1;
+}
