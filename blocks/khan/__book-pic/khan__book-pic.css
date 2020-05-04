@@ -1,0 +1,15 @@
+.khan__book-pick {
+  width: 620px;
+  height: 608px;
+  background-image: url("./../../../images/khan-book.jpg");
+  background-size: cover;
+
+  /*
+  Вариант решения с использованием тега IMG
+  overflow: hidden;
+  +
+  в отдельном элементе определить для тега img
+  ширину в 620 пикселей
+  */
+
+}

@@ -1,0 +1,16 @@
+@import url(./__columns/footer__columns.css);
+@import url(./__column/footer__column.css);
+@import url(./__author/footer__autor.css);
+@import url(./__column-heading/fotter__column-heading.css);
+@import url(./__column-links/footer__column-links.css);
+@import url(./__social-icons/fotter__social-icons.css);
+@import url(./__link/footer__link.css);
+@import url(./__link/_icon/footer__link_icon_facebook.css);
+@import url(./__link/_icon/footer__link_icon_vk.css);
+@import url(./__link/_icon/footer__link_icon_instagram.css);
+
+.footer {
+  padding: 60px 0 40px;
+  position: relative;
+  background-color: #1f1f1f;
+}

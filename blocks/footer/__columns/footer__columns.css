@@ -1,0 +1,8 @@
+.footer__columns {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  /*Высота блока в макете не задана, примерно вот такая*/
+  min-height: 350px;
+}

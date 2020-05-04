@@ -1,0 +1,8 @@
+@import url(./__iframes/video__iframes.css);
+@import url(./__iframe/video__iframe.css);
+
+.video {
+  margin-top: 100px;
+  /*В брифе не указано явно, сколько должен составлять этот градиент*/
+  background-image: linear-gradient(to top, #f2f2f2 0px, #f2f2f2 40px, white 40px);
+}
