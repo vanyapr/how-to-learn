@@ -1,0 +1,15 @@
+.page {
+  animation: dizzy 160s linear alternate 5s;
+}
+
+@keyframes dizzy  {
+  from {
+    transform: rotate(0deg);
+    color: #000;
+  }
+
+  to {
+    transform: rotate(-1.337deg);
+    color: #133713;
+  }
+}
