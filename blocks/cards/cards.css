@@ -6,10 +6,9 @@
 .cards {
   width: 920px;
   margin: 0 auto;
-  /* Можн сверстать флексом, но вроде нам показывали верстку гридом
-  Как правильнее?
-  */
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-column-gap: 100px;
+  list-style: none;
+  padding: 0;
 }

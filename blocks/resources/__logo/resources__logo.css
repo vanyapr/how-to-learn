@@ -4,5 +4,14 @@
   display: block;
   background-position: center;
   background-repeat: no-repeat;
+
+  /*
   text-indent: -9000px;
+  Для доступного скрытия текста лучше использовать группу правил
+  https://a11yproject.com/posts/how-to-hide-content/
+
+  Это конечно здорово, но тогда мы скроем сами изображения,
+  а нам надо чтобы ссылка содержала внутри себя контент,
+  а тут нам придется порождать дополнительную вложенность
+  */
 }
