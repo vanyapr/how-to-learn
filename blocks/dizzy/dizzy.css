@@ -1,5 +1,5 @@
 .page {
-  animation: dizzy 160s linear alternate 5s;
+  animation: dizzy 160s linear alternate 5s infinite;
 }
 
 @keyframes dizzy  {
